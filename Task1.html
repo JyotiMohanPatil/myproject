@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Nav Menu</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      
+    }
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* Just to enable scrolling */
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(243, 83, 136);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 999;
+    }
+
+    nav.scrolled {
+      background-color: #333;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: lightskyblue;
+      color:black;
+    }
+
+    /* Initial transparent state - white text */
+    nav:not(.scrolled) ul li a {
+      color: black;
+    }
+
+    /* When scrolled - white background, darker text */
+    nav.scrolled ul li a {
+      color: #fff;
+    }
+
+    nav.scrolled ul li a:hover {
+      background-color: lightskyblue;
+      color:black;
+    }
+     /* Optional padding for content */
+     .content {
+      padding-top: 180px;
+      text-align: center;
+    }
+    .container{
+    width: 1200px;
+    height: 450px;
+    color: white;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+    }
+    .shadow {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .shadow h1 {
+        margin-bottom: 25px;
+        margin-top: 100px;
+        font-size: 52px;
+    }
+    .shadow p {
+        margin-bottom: 35px;
+    }
+    .shadow button {
+        font-size: 15px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: 1px solid white;
+        color: white;
+        padding: 13px 30px;
+    }
+    .g1 {
+        /* background-color: lightslategray; */
+        background-image: url("https://th.bing.com/th/id/OIP.oL6gUjxDGe50rtfzxIPmrwHaE8?pid=ImgDet&rs=1");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3; */
+    }
+    .g2 {
+        background-image: url("https://th.bing.com/th/id/OIP.8t_IJ6vcwYfiKZrolEsetwHaES?w=223&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    
+        grid-row-start: 1;
+        grid-row-end: 2;  
+    }
+    .g3 {
+        background-image: url("https://www.womenfitness.net/wp/wp-content/uploads/2017/09/Women-And-Shopping-Addiction.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        grid-column-start: 3;
+        grid-column-end: 5;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .section-1 H1{
+        font-size: 40PX;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .middle-section{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+
+    }
+    .middle-section img{
+        box-shadow: 0px 0px 10px black;
+        border-radius:2%;
+    }
+    .middle-section img:hover{
+        border-radius:10%; 
+    }
+    .middle-section h2{
+        margin-top: 10px;
+    }
+    .middle-section p{
+        font-size: 25px;
+        font-weight: bold;
+        margin: 5px;
+    }
+    
+  </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Jewellery</a></li>
+            <li><a href="#">Shoes & Sandals</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1>Welcome to My Site..!! Enjoy the Shopping...</h1>
+        <h2>Scroll down to See the Effect</h2>
+    </div>
+    <div class="container">
+        <div class="g1">
+            <div class="shadow">
+                <h1>Women Fashion</h1>
+                <div style="width: 500px;">
+                    <p>You are welcome to employ spectacular Divi in fashion brands or online clothing stores. Your resource to discover and 
+                        connect with designers worldwide.
+                    </p>
+                </div>
+                <button>Shop Now</button>
+            </div>
+        </div>
+        <div class="g2">
+            <div class="shadow">
+              <h3 style="margin-bottom: 12px">Special Offer</h3>
+              <h2>Women Fashion</h2>
+            </div>
+        </div>
+        <div class="g3">
+            <div class="shadow">
+              <h3 style="margin-bottom: 12px">Special Offer</h3>
+              <h2>Women Fashion</h2>
+            </div>
+        </div>  
+    </div>
+    <div class="section-1">
+        <h1>TRENDING PRODUCT</h1>
+        <div class="middle-section">
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.Nd9lwd_ooD_YJcwi17tu0QHaHa?w=208&h=277&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                width="250px" height="400px"/>
+                <h2>Womens Fashion</h2>
+                <p>50%OFF &nbsp;&nbsp;₹1999</p>
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.XrlZfn0GG2nVCShn8BK5UwAAAA?w=111&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                width="250px" height="400px"/>
+                <h2>Mens Fashion</h2>
+                <p>30%OFF &nbsp;&nbsp;₹2999</p>
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.7VBg231ccv24dgn-LvKstAHaLH?w=208&h=305&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                width="250px" height="400px"/>
+                <h2>Womens Fashion</h2>
+                <p>80%OFF &nbsp;&nbsp;₹999</p>
+            </div> 
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.KG0urKi-60abINC0odaV4wHaLH?w=132&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+                width="250px" height="400px"/>
+                <h2>Kids Fashion</h2>
+                <p>20%OFF &nbsp;&nbsp;₹5999</p>
+            </div>
+        </div>
+ </div>
+  
+  <script>
+    const nav = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

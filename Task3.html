@@ -1,0 +1,183 @@
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("data:image/jpeg;base64,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");
+            text-align: center;
+            background-size: cover;
+        }
+        .container {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .game {
+            height: 60vmin;
+            width: 60vmin;
+            display: flex; 
+            flex-wrap: wrap;  
+            gap: 1.5vmin;
+            justify-content: center;
+        }
+        .box {
+            height: 18vmin;
+            width: 18vmin;
+            border-radius: 1rem;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            font-size: 8vmin;
+            color:white;
+            background-color: black;
+            padding: 50px;
+        }
+        #reset {
+            padding: 17px;
+            font-size: 1.25rem;
+            background: #191913;
+            color: white;
+            border-radius: 1rem;
+            border: none;
+        }
+        .box:hover {
+            background-color:white;
+        }
+        #new-btn {
+            padding: 1rem;
+            font-size: 1.25rem;
+            background: #191913;
+            color: white;
+            border-radius: 1rem;
+            border: none;
+        }
+        #msg {
+            font-size: 8vmin;
+        }
+        .msg-container {
+            height: 30vmin;
+        }
+        .hide {
+            display: none;
+        }
+        h1{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new-btn">New Game</button>
+    </div>
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+        </div>
+        <button id="reset">Reset Game</button>
+    </main>
+    <script>
+        let boxes = document.querySelectorAll('.box');
+        let resetBtn = document.querySelector('#reset');
+        let turnO = true; // Player O starts
+        let newGameBtn = document.querySelector('#new-btn');
+        let msgContainer = document.querySelector('.msg-container');
+        let msg = document.querySelector('#msg');
+
+        const winPatterns = [
+            [0, 1, 2],
+            [0, 3, 6],
+            [0, 4, 8],
+            [1, 4, 7],
+            [2, 5, 8],
+            [2, 4, 6],
+            [3, 4, 5],
+            [6, 7, 8]
+        ];
+
+        boxes.forEach((box) => {
+            box.addEventListener('click', function () {
+                if (turnO) {
+                    box.innerText = 'O';
+                    box.style.color = 'yellow';
+                    turnO = false;
+                    box.disabled = true;
+                    checkWinner();
+                } else {
+                    box.innerText = 'X';
+                    box.style.color = 'yellow';
+                    turnO = true;
+                    box.disabled = true;
+                    checkWinner();
+                }
+            });
+        });
+
+        const enableBoxes = () => {
+            for (let box of boxes) {
+                box.disabled = false;
+                box.innerText = "";
+            }
+        };
+
+        const disableBoxes = () => {
+            for (let box of boxes) {
+                box.disabled = true;
+            }
+        };
+
+        const showWinner = (winner) => {
+            msg.innerText = `Congratulations, Winner is ${winner}`;
+            msgContainer.classList.remove('hide');
+            disableBoxes();
+        };
+
+        const checkWinner = () => {
+            let hasWin = false;
+            for (let pattern of winPatterns) {
+                let pos1Val = boxes[pattern[0]].innerText;
+                let pos2Val = boxes[pattern[1]].innerText;
+                let pos3Val = boxes[pattern[2]].innerText;
+
+                if (pos1Val !== "" && pos2Val!=="" && pos3Val!=="" && 
+                    pos1Val === pos2Val && pos2Val === pos3Val) {
+                    showWinner(pos1Val);
+                    hasWin = true;
+                    return;
+                }
+            }
+
+            if (!hasWin) {
+                const allBoxes = [...boxes].every((box) => box.innerText !== "");
+                if (allBoxes) {
+                    msgContainer.classList.remove('hide');
+                    msg.innerText = 'Match Drawn';
+                }
+            }
+        };
+
+        const resetGame = () => {
+            turnO = true;
+            enableBoxes();
+            msgContainer.classList.add('hide');
+        };
+
+        newGameBtn.addEventListener('click', resetGame);
+        resetBtn.addEventListener('click', resetGame);
+    </script>
+</body>
+</html>
